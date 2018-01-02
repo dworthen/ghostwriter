@@ -1,0 +1,14 @@
+{{!< default}}
+
+<div id="latest-post" class="container">
+    {{#foreach posts}}
+        {{#if @first}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}   
+{{> post-content}}
+<div id="disqus_thread"></div>
+<script>
+    window.embed.loadDisqus("ghost-{{id}}", '{{url absolute="true"}}');
+</script>
+        {{/if}}
+    {{/foreach}}
+</div>

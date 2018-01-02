@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{#get "posts" limit="5" include="tags,author"}}
+
+<div id="post-index" class="container">
+    <ol class="post-list">
+        {{> loop}}
+    </ol>
+
+    <div class="post-navigation">
+        {{pagination}}
+    </div>
+</div>
+
+{{/get}}

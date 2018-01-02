@@ -1,0 +1,14 @@
+{{!< default}}
+
+<div class="container">
+    {{#post}}
+{{! No indention to prevent handlebars indenting <pre> tag content}}   
+{{> post-content}}
+        <div id="disqus_thread"></div>
+        <script>
+            window.embed.loadDisqus("ghost-{{id}}", '{{url absolute="true"}}');
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+    {{/post}}
+</div>
